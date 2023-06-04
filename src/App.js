@@ -1,17 +1,24 @@
 import './App.css';
-import SignIn from './components/SignIn';
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "./firebase.js";
-import Line from './components/Line';
+import BlogPage from './compornetns/BlogPage';
+import Header from './compornetns/Header';
+import HomePage from './compornetns/HomePage';
+import { BrowserRouter as Router, Route, Rputes } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 
 
 function App() {
-  const [user] = useAuthState(auth);
 
   return (
-    <div>
-      {user ? <Line /> : <SignIn />}
+   <Router>
+     <div className='App'>
+      <Header />
+
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/blog' element={<BlogPage />} />
+      </Routes>
     </div>
+  </Router>
   );
 }
 
