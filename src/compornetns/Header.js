@@ -12,7 +12,7 @@ const Header = () => {
             <nav>
                 <ul>
                     <li>
-                        <Link to='/'>ホーム</Link>
+                        <Link to='myPage'>ホーム</Link>
                     </li>
                     <li>
                         <Link to='/blog'>ブログ</Link>
